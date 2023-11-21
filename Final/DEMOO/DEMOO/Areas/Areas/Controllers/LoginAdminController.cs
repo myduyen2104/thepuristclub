@@ -34,10 +34,11 @@ namespace DEMOO.Areas.Areas.Controllers
                 }
                 else
                 {
-                    return View();
+                    
                 }
+                return RedirectToAction("Login");
             }
-            return RedirectToAction("Login");
+            return View();
         }
         [HttpGet]
         public ActionResult Login()
@@ -67,6 +68,7 @@ namespace DEMOO.Areas.Areas.Controllers
                         ViewBag.ThongBao = "Tên đăng nhập hoặc mật khẩu không đúng";
                     }
                 }
+                return View();
             }
             return RedirectToAction(actionName: "Index", controllerName: "Category");
         }

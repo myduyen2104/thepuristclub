@@ -25,11 +25,7 @@ div.date {
 }
 
 .underline {
-    border-bottom: 1px dotted #8888888e;
-}
-
-.card img {
-    width: 98%;
+      border-bottom: 1px dotted #8888888e;
 }
 
 main {
@@ -38,12 +34,8 @@ main {
     grid-column-gap: 15px;
 }
 
-.row {
-}
-
-.card-right img {
-    width: 150px;
-    height: 110px;
+.card-right {
+    width: 100%;
 }
 
 .box {
@@ -65,4 +57,24 @@ main {
     display: block;
     margin: 20px auto 0;
     cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.box1 img {
+    margin-right: 15px;
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    max-height: 110px;
+    object-fit: cover;
+}
+
+a {
+    padding-left: 0px;
 }

@@ -75,7 +75,7 @@ button {
 
 .search-icon {
     /* Thiết lập vị trí của icon tìm kiếm */
-    right: 10px;
+    right: 120px;
     top: 43px;
     cursor: pointer;
     font-size: 20px;

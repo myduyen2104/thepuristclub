@@ -13,7 +13,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Purists Club</title>
-    <link href="~/assets/css/shop.css" rel="stylesheet" />
     <link href="~/assets/css/kinh-mat.css" rel="stylesheet" />
     <link href="~/assets/css/cart.css" rel="stylesheet" />
 </head>
@@ -29,19 +28,19 @@
                                 <h4 class="name">Sắp xếp theo</h4>
                                 <div class="options">
                                     <label>
-                                        <input type="radio" name="sort" value="recently" checked="">
+                                        <input type="radio" name="sort" value="recently" @(string.IsNullOrEmpty(ViewBag.Order) ? "checked" : "")>
                                         <b></b>
-                                        <span style="color: #FF7E00;">Gần đây</span>
+                                        @Html.ActionLink("Gần đây", "Index", "CustomerProduct", new { category = ViewBag.Category }, null)
                                     </label>
                                     <label>
-                                        <input type="radio" name="sort" value="price_up">
+                                        <input type="radio" name="sort" value="price_up" @(ViewBag.Order == "tang_dan" ? "checked" : "")>
                                         <b></b>
-                                        <span>Giá tăng dần</span>
+                                        @Html.ActionLink("Giá tăng dần", "Index", "CustomerProduct", new { category = ViewBag.Category, order = "tang_dan" }, null)
                                     </label>
                                     <label>
-                                        <input type="radio" name="sort" value="price_down">
+                                        <input type="radio" name="sort" value="price_down" @(ViewBag.Order == "giam_dan" ? "checked" : "")>
                                         <b></b>
-                                        <span>Giá giảm dần</span>
+                                        @Html.ActionLink("Giá giảm dần", "Index", "CustomerProduct", new { category = ViewBag.Category, order = "giam_dan" }, null)
                                     </label>
                                 </div>
                             </div>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DEMOO.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,15 @@ namespace DEMOO.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        DBShopEntities db = new DBShopEntities();
+        public ActionResult Index(string search)
         {
-            return View();
+            var searchpro = db.Products.ToList();
+            if (!String.IsNullOrEmpty(search))
+            {
+                searchpro = searchpro.Where(x => x.NamePro.Trim() == search).ToList();
+            }
+            return View(searchpro);
         }
 
         public ActionResult About()

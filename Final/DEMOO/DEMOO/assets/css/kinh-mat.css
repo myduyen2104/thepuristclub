@@ -130,3 +130,11 @@ ul.pagination {
 .item-focused {
     padding: 0.6rem;
 }
+
+label > a {
+    padding: 0px;
+}
+
+.card-body > a {
+    padding: 0px;
+}

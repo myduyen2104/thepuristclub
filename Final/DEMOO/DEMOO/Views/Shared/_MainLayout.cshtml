@@ -16,7 +16,9 @@
             <div class="container">
                 <div class="inner">
                     <div class="search-icon">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="submit" id="search" />
+                        @Html.Action("Index", "Home")
+                            <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
 
                     <div class="shopping-cart-icon">
@@ -59,13 +61,13 @@
                                 @Html.ActionLink("KÍNH MẮT", "Index", "CustomerProduct")
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="maybach-eyewear">Maybach Eyewear</a>
+                                        @Html.ActionLink("Maybach Eyewear", "Index", "CustomerProduct", new { category = "Maybach", order = ViewBag.Order }, null)
                                     </li>
                                     <li>
-                                        <a href="jacques-marie-mage">Jacques Marie Mage</a>
+                                        @Html.ActionLink("Jacques Marie Mage", "Index", "CustomerProduct", new { category = "Marie", order = ViewBag.Order }, null)
                                     </li>
                                     <li>
-                                        <a href="kuboraum">Kuboraum</a>
+                                        @Html.ActionLink("Kuboraum", "Index", "CustomerProduct", new { category = "Kuboraum", order = ViewBag.Order }, null)
                                     </li>
                                 </ul>
                             </li>

@@ -23,7 +23,7 @@
             @Html.ValidationMessageFor(model => model.EmailCus, "", new { @class = "input-box" })
 
             <h1> Password:</h1>
-            @Html.EditorFor(model => model.PassWordCus, new { htmlAttributes = new { @class = "input-field" } })
+            @Html.EditorFor(model => model.PassWordCus, new { htmlAttributes = new { @class = "input-field", type = "password" } })
             @Html.ValidationMessageFor(model => model.PassWordCus, "", new { @class = "input-box" })
         </div>
         <br>
