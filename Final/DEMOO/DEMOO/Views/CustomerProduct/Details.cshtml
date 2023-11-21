@@ -1,0 +1,59 @@
+﻿@model DEMOO.Models.Product
+
+<html>
+<head>
+    <title>The Purists Club</title>
+    <link href="~/assets/css/shop.css" rel="stylesheet" />
+    <link href="~/assets/css/product-kinh.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="inner">
+            <main>
+                <div class="img-col">
+                    <img style="width: 100%;" src="~/Images/@Model.ImagePro">
+                </div>
+                <div style="width: 400px; ">
+                    <div class="product-info">
+                        <h5>@Model.NamePro</h5>
+                        <div class="product-info-header">
+                            <p class="product--avaliable">CODE: @Model.DecriptionPro|</p>
+                            <p class="price">@Model.Price VNĐ</p>
+                        </div>
+                        <div class="product-info-main underline">
+                            <div class="info">
+                                <p style="display:table-cell">
+                                    Size:
+                                    <div style="display:table-cell"> @Model.Size</div>
+                                </p>
+                            </div>
+                            <div class="info">
+                                <p style="display:table-cell" ">
+                                    Lens:
+                                    <div style="display:table-cell" "> @Model.Lens</div>
+                                </p>
+                            </div>
+                            <div class="info">
+                                <p>@Model.Madein</p>
+                            </div>
+                            <div class="info">
+                                <p>@Model.Description</p>
+                            </div>
+                            <a class="add-to-cart" href="@Url.Action("AddToCart", "Cart", new {id = Model.ProductID })">
+                                ĐẶT MUA
+                            </a>
+                            <div style="height:10px;"></div>
+                        </div>
+                        <div class="product-info-footer">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter icon-uncircle"></i>
+                            <i class="fa-brands fa-tumblr icon-uncircle"></i>
+                            <i class="fa-brands fa-pinterest"></i>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿@model DEMOO.Models.Category
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<html>
+<head>
+    <link href="~/assets/css/category.css" rel="stylesheet" />
+</head>
+<body>
+    <h2 style="text-align: center; padding: 1rem">Details</h2>
+
+    <div>
+        <h4 style="padding: 1rem">Category</h4>
+        <hr />
+        <dl class="form-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.IDCate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IDCate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NameCate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NameCate)
+            </dd>
+
+        </dl>
+    </div>
+    <p class="back">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

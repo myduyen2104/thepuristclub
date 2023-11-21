@@ -1,0 +1,59 @@
+﻿@model IEnumerable<DEMOO.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <link href="~/assets/css/category.css" rel="stylesheet" />
+</head>
+<body>
+    <h2 style="text-align: center">THÔNG TIN CATEGORIES</h2>
+    <p style="padding:1rem">
+        @Html.ActionLink("TẠO MỚI", "Create", null, new
+        {
+            @class = "tnh"
+        })
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                MÃ CATEGORY
+            </th>
+            <th>
+                TÊN CATEGORY
+            </th>
+
+            <th>
+                LỆNH
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IDCate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NameCate)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.Id }, new
+                    {
+                    @class = "btn-success"
+                    }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.Id },
+                    new { @class = "btn-primary" }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.Id }, new
+                    {
+                    @class = "btn-danger"
+                    })
+                </td>
+            </tr>
+        }
+    </table>
+    </div>
+
+</body>
+</html>

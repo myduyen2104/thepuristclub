@@ -1,0 +1,154 @@
+﻿@model   LTWTH.Models.Products
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<div style="margin: 10px auto; width: 40%;">
+    <h2 style="text-align: center">CREATE PRODUCT</h2>
+    @using (Html.BeginForm("Create", "Products", FormMethod.Post, new
+    {
+        @enctype = "multipart/form-data"
+    }))
+    {
+        @Html.AntiForgeryToken()
+<div class="form-horizontal">
+    <hr />
+
+    @Html.ValidationSummary(true, "", new
+    {
+        @class = "text-danger"
+    })
+
+    <div class="form-group">
+        NamePro
+        <div class="col-md-10">
+
+            @Html.EditorFor(model => model.NamePro, new
+            {
+            htmlAttributes = new { @class = "form-control" }
+            })
+            @Html.ValidationMessageFor(model => model.NamePro,
+            "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        Description
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Description, new
+            {
+            htmlAttributes = new { @class = "form-control" }
+            })
+            @Html.ValidationMessageFor(model =>
+            model.Description, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        Size
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Size, new
+            {
+            htmlAttributes = new { @class = "form-control" }
+            })
+            @Html.ValidationMessageFor(model =>
+            model.Size, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        Material
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Material, new
+            {
+            htmlAttributes = new { @class = "form-control" }
+            })
+            @Html.ValidationMessageFor(model =>
+            model.Material, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        Amout
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Amout, new
+            {
+            htmlAttributes = new { @class = "form-control" }
+            })
+            @Html.ValidationMessageFor(model =>
+            model.Amout, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        Lens
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Lens, new
+            {
+            htmlAttributes = new { @class = "form-control" }
+            })
+            @Html.ValidationMessageFor(model =>
+            model.Lens, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        Color
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Color, new
+            {
+            htmlAttributes = new { @class = "form-control" }
+            })
+            @Html.ValidationMessageFor(model =>
+            model.Color, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        Madein
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Madein, new
+            {
+            htmlAttributes = new { @class = "form-control" }
+            })
+            @Html.ValidationMessageFor(model =>
+            model.Madein, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        Category
+        <div class="col-md-10">
+            @Html.DropDownList("Category", null, htmlAttributes:
+            new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Category,
+            "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        Price
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Price, new
+            {
+            htmlAttributes = new { @class = "form-control" }
+            })
+            @Html.ValidationMessageFor(model => model.Price, "",
+            new { @class = "text-danger" })
+        </div>
+    </div>
+    
+    <div class="form-group">
+        ImagePro
+        <div class="col-md-10">
+            <input type="file" name="ImagePro" />
+            @Html.ValidationMessageFor(model => model.ImagePro,
+            "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10 mb-3 mt-3">
+
+            <input type="submit" value="Create" class="btn btn-primary" />
+
+        </div>
+    </div>
+</div>
+    }
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>

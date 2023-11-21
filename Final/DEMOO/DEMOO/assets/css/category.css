@@ -1,0 +1,106 @@
+﻿html {
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.form-horizontal{
+    padding-left:2rem;
+}
+
+.form-group{
+    padding-top:1rem;
+}
+
+.col-md-10 {
+    padding-top: 1rem;
+}
+
+.form-control {
+    height: 30px;
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.05);
+    outline: none;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+
+}
+
+.tnh{
+    width: 12%;
+    padding-top:10px;
+    padding: 5px;
+    background-color:orange;
+    border-radius: 5px;
+    color: #333333;
+    text-align: center;
+    border: orange;
+}
+
+.back {
+    padding: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.table{
+    padding:2rem;
+}
+
+th{
+    padding-right: 7rem;
+    padding-bottom:15px;
+}
+
+td {
+    padding-bottom: 15px;
+}
+
+dt {
+    padding: 1rem;
+    padding-bottom: 20px;
+}
+
+dd {
+    height: 30px;
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.05);
+    outline: none;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    width:15%;
+}
+
+
+.btn-success {
+    width: 15%;
+    padding-top: 10px;
+    padding: 5px;
+    background-color: burlywood;
+    border-radius: 5px;
+    color: #333333;
+    text-align: center;
+}
+
+.btn-primary {
+    width: 12%;
+    padding-top: 10px;
+    padding: 5px;
+    background-color: sandybrown;
+    border-radius: 5px;
+    color: #333333;
+    text-align: center;
+}
+
+.btn-danger {
+    width: 12%;
+    padding-top: 10px;
+    padding: 5px;
+    background-color: coral;
+    border-radius: 5px;
+    color: #333333;
+    text-align: center;
+}

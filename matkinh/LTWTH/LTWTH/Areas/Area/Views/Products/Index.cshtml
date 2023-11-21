@@ -1,0 +1,93 @@
+﻿@model IEnumerable<LTWTH.Models.Products>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NamePro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagePro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Material)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amout)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Madein)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lens)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.NameCate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NamePro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImagePro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Material)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amout)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Madein)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lens)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.NameCate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProductID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<DEMOO.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Purists Club</title>
+    <link href="~/assets/css/shop.css" rel="stylesheet" />
+    <link href="~/assets/css/kinh-mat.css" rel="stylesheet" />
+    <link href="~/assets/css/cart.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner">
+            <div class="product-category clr">
+                <div class="filter-col">
+                    <form action="" method="get" class="filter-form" id="filter-form">
+                        <div class="groups">
+                            <div class="group active" data-value="[&quot;recently&quot;]" data-old-value="[&quot;recently&quot;]">
+                                <h4 class="name">Sắp xếp theo</h4>
+                                <div class="options">
+                                    <label>
+                                        <input type="radio" name="sort" value="recently" checked="">
+                                        <b></b>
+                                        <span style="color: #FF7E00;">Gần đây</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="sort" value="price_up">
+                                        <b></b>
+                                        <span>Giá tăng dần</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="sort" value="price_down">
+                                        <b></b>
+                                        <span>Giá giảm dần</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="products-col">
+                    <div class="clr product-thumbnail-list aspect-ratio __3x2">
+                        @foreach (var item in Model)
+                        {
+                            <div class="item-focused" title=" Html.DisplayFor(modelItem => item.NamePro)">
+                                <div class="image">
+                                    <a style="height: 180px" href="~/CustomerProducts/Details">
+                                        <img class="released-only" src="~/Images/@item.ImagePro">
+                                    </a>
+                                    @Html.ActionLink("Details", "Details", new { id = item.ProductID })
+                                </div>
+                                <div class="card-body" style="text-align: center">
+                                    <h4 class="name">@Html.DisplayFor(modelItem => item.NamePro)</h4>
+                                    <p class="price">@Html.DisplayFor(modelItem => item.Price)</p>
+
+                                    @Html.ActionLink("Details", "Details", new { id = item.ProductID })
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <ul class="pagination">
+                <li class="prev-disabled"><span>«</span></li>
+                <li class="active"><a href="/page=1" data-page="0">1</a></li>
+                <li><a class="page" href="/page=2">2</a></li>
+                <li><a class="next" href="/page=2" data-page="1">»</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="~/js/cart.js"></script>
+</body>
+</html>

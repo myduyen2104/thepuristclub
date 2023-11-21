@@ -1,0 +1,82 @@
+﻿main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 20fr;
+    grid-column-gap: 15px;
+    margin-top: 70px;
+}
+
+.img--zoom img {
+    width: 400px;
+    height: 300px;
+}
+
+.product-info {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    margin: 21px;
+    margin-bottom: 10px;
+    line-height: 15p;
+}
+
+    .product-info h5 {
+        font-size: 24px;
+        font-weight: 500;
+        margin-top: -20px;
+    }
+
+.product--avaliable {
+    font-size: 15px;
+    margin-top: -30px;
+    color: #888;
+}
+
+    .product--avaliable::after {
+        content: "AVALIABLE";
+        color: orange;
+        margin-left: 2px;
+    }
+
+.price {
+    color: orange;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -1px;
+}
+
+.product-info-main p {
+    font-weight: 700;
+}
+
+div.product-info-main p:nth-child(1)::after {
+    content: ": 50- 20- 143";
+    font-weight: 500;
+}
+
+div.product-info-main p:nth-child(2)::after {
+    content: ": Brown Gradient Polarized CR39 Lenses";
+    font-weight: 500;
+}
+
+.product-info-footer {
+    padding-top: 7px;
+}
+
+    .product-info-footer i {
+        font-size: 20px;
+        padding: 0.2rem;
+        color: #888;
+    }
+
+div.img-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.img-col img {
+    width: 45px;
+}
+
+.underline {
+    border-bottom: 1px solid #d3d1d170;
+}

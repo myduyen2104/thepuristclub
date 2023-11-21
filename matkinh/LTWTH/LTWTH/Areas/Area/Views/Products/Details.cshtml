@@ -1,0 +1,105 @@
+﻿@model LTWTH.Models.Products
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Products</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamePro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamePro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePro)
+        </dt>
+        <dd>
+            <img src="~/Images/@Model.ImagePro" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Material)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Material)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amout)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amout)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Size)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Size)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Madein)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Madein)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lens)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lens)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.NameCate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.NameCate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,11 @@
+﻿.inner {
+    padding: 7px;
+    ;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    width: 1150px;
+    margin: auto;
+    right: 0;
+    position: relative;
+}

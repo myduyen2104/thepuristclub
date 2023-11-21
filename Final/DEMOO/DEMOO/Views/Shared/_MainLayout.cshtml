@@ -1,0 +1,223 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Purists Club</title>
+    <link href="~/assets/css/shop.css" rel="stylesheet" />
+    <link href="~/assets/css/kinh-mat.css" rel="stylesheet" />
+    <link href="~/assets/css/cart.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-..." crossorigin="anonymous" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="overlay">
+            <div class="container">
+                <div class="inner">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                    <div class="shopping-cart-icon">
+                        <div class="count">(@ViewBag.TotalNumber)</div>
+                        <i class="fa-solid fa-cart-shopping">  </i>
+                    </div>
+                    <div class="user-icon">
+                        <a style="padding:0px" href="~/LoginCus/Login">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                    </div>
+
+                    <a class="header-logo">
+                        <img id="logo" src="https://asset.brandfetch.io/id3bWjkfk8/idKy4qkXbH.png" /><br />
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="container" id="top-nav">
+                <div class="inner">
+                    <div class="menu-toggle">
+                        <ul class="menu">
+                            <li class="menu-item" style="list-style-type: none; text-decoration: none; color: black;">
+                                @Html.ActionLink("TRANG CHỦ", "Index", "Home")
+                            </li>
+                            <li style="list-style-type: none; text-decoration: none; color: black">
+                                @Html.ActionLink("BLOG", "Index", "Blog")
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="tin-tuc">Tin Tức</a>
+                                    </li>
+                                    <li>
+                                        <a href="thuong-hieu">Thương Hiệu</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            <li style="list-style-type: none; text-decoration: none; color: black">
+                                @Html.ActionLink("KÍNH MẮT", "Index", "CustomerProduct")
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="maybach-eyewear">Maybach Eyewear</a>
+                                    </li>
+                                    <li>
+                                        <a href="jacques-marie-mage">Jacques Marie Mage</a>
+                                    </li>
+                                    <li>
+                                        <a href="kuboraum">Kuboraum</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+
+    <footer class="ft-container">
+        <div class="inner">
+            <div class="content">
+                <div class="ft-row">
+                    <div class="ft-col-logo">
+                        <a class="ft-logo" href="shop.html" title="The Purists Club">
+                            <img id="logo" src="https://asset.brandfetch.io/id3bWjkfk8/idKy4qkXbH.png" /><br />
+                        </a>
+
+                        <div class="socials">
+                            <a id="sc" href="https://www.facebook.com/thepuristsclub">
+                                <i class="icon facebook-icon">
+                                    <img id="ft-icon" src="https://img.upanh.tv/2023/10/06/facebook.png" alt="facebook.png" title="Facebook" /><br />
+                                </i>
+                            </a>
+
+                            <a id="sc" href="https://www.instagram.com/thepuristsclub/">
+                                <i class="icon instagram-icon">
+                                    <img id="ft-icon" src="https://img.upanh.tv/2023/10/06/instagram.png" alt="instagram.png" title="Instagram" /><br />
+                                </i>
+                            </a>
+
+                            <a id="sc" href="https://www.youtube.com/channel/UCzk8lGlesMQz1d9getNNxxw/">
+                                <i class="icon youtube-icon">
+                                    <img id="ft-icon" src="https://img.upanh.tv/2023/10/06/youtube.png" alt="youtube.png" title="Youtube" /><br />
+                                </i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="ft-col">
+                        <h3 class="title" style="margin-top: 17px;">GIỚI THIỆU</h3>
+
+                        <ul class="link">
+                            <li>
+                                <a href="ve-chung-toi" style="text-decoration: none; padding: 0.1rem;" title="Về Chúng Tôi">
+                                    Về Chúng Tôi
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ft-col">
+                        <h3 class="title" style="margin-top: 17px;">HỖ TRỢ</h3>
+
+                        <ul class="link">
+                            <li>
+                                <a id="link-title" href="hoi-dap" style="text-decoration: none; padding: 0.1rem;" title="Hỏi Đáp">
+                                    Hỏi Đáp
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ft-col">
+                        <h3 class="title" style="margin-top: 17px;">LIÊN HỆ</h3>
+
+                        <ul class="link">
+                            <li>
+                                Hotline:
+                                <a id="link-tel" href="tel:+84978950312" style="text-decoration: none">+84978950312</a>
+                                ,
+                                <a id="link-tel" href="tel:+84977705665" style="text-decoration: none" z>+84977705665</a>
+                            </li>
+
+                            <li>
+                                Email:
+                                <a id="link-email" href="mailo:info@thepuristsclub.com" style="text-decoration: none">info@thepuristsclub.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="copyright"> Copyright 2023 </div>
+
+                <div class="company"> The Purists Club </div>
+
+                <div class="address">
+                    <div id="address">
+                        Địa chỉ 1: 29 Tô Hiến Thành, Quận Hai Bà Trưng, TP. Hà Nội
+                    </div>
+                    <div id="address">
+                        Địa chỉ 2: 37 Xuân Thủy, Thảo Điền, Quận 2, TP. Hồ Chí Minh
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section>
+        <div class="search-overlay">
+            <section class="search-wrapper">
+                <div class="close-search">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+                <form class="search-form clr">
+                    <input type="text" placeholder="Bạn đang muốn tìm gì?" class="search-input">
+                    <button type="submit" class="submit-button">Tìm kiếm</button>
+                </form>
+            </section>
+        </div>
+    </section>
+
+    <section id="formsearch">
+        <div class="cart-overlay">
+            <section class="cart">
+                <div class="titlecart">
+                    <div class="close-cart">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <h2>Giỏ hàng</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sản phẩm</th>
+                                <th>Giá</th>
+                                <th>Số lượng</th>
+                                <th>Chọn</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="show-product">
+                    <form action="">
+                        <table>
+                            <tbody></tbody>
+                        </table>
+                        <div style="text-align: right;" class="price-total">
+                            <p style="font-weight: bold;">Tổng tiền: <span>0</span><sup>VNĐ</sup></p>
+                        </div>
+                    </form>
+                </div>
+                <div id="checkout">
+                    <button style="font-weight: bold;" class="checkout-btn">Thanh toán</button>
+                </div>
+            </section>
+        </div>
+    </section>
+
+</body>
+</html>
+
+

@@ -1,0 +1,98 @@
+﻿@model IEnumerable<DEMOO.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    
+    <link href="~/assets/css/products.css" rel="stylesheet" />
+</head>
+<body>
+    <h2 style="text-align: center; padding: 1rem">THÔNG TIN PRODUCTS</h2>
+
+    <p class="tnh">
+        @Html.ActionLink("Create New", "Create", null, new
+        {
+            @class = "tnh"
+        })
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NamePro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DecriptionPro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Size)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Madein)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lens)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImagePro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category1.NameCate)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NamePro)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DecriptionPro)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Size)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Madein)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lens)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ImagePro)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category1.NameCate)
+                </td>
+                <td>
+                    <div class="border-success">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ProductID })
+                    </div>
+                    <div class="border-primary">
+                        @Html.ActionLink("Details", "Details", new { id = item.ProductID })
+                    </div>
+                    <div class="border-danger">
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+                    </div>
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>

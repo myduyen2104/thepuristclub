@@ -1,0 +1,36 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Purists Club</title>
+    <link href="~/assets/css/admin.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="header">
+        <img id="logo" src="https://asset.brandfetch.io/id3bWjkfk8/idKy4qkXbH.png" /><br />
+        Chào mừng bạn đã quay trở lại!
+    </div>
+    <div class="container">
+        <div class="inner">
+            <div class="menu">
+                <div class="menu-info">
+                    @Html.ActionLink("CATEGORY", "Index", "Category")
+                </div>
+                <div class="menu-info">
+                    @Html.ActionLink("PRODUCT", "Index", "Products")
+                </div>
+            </div>
+        </div>
+        <div style="width: 20px; box-shadow:none"></div>
+        <div class="content">
+            @RenderBody()
+        </div>
+    </div>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>

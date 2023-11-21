@@ -1,0 +1,49 @@
+﻿@model DEMOO.Models.AdminUser
+
+@{
+    ViewBag.Title = "Register";
+    Layout = null;
+}
+
+<title>Register</title>
+<link href="~/assets/css/login.css" rel="stylesheet">
+
+@using (Html.BeginForm("Register", "LoginAdmin"))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true)
+    <div class="login-box">
+        <div class="login-header">
+            <header>Register</header>
+        </div>
+        <h4>AdminUser</h4>
+        <div class="input-box">
+            <h1>ID:</h1>
+            @Html.EditorFor(model => model.ID, new { htmlAttributes = new { @class = "input-field" } })
+            @Html.ValidationMessageFor(model => model.ID, "", new { @class = "input-box" })
+
+            <h1>Name:</h1>
+            @Html.EditorFor(model => model.NameUser, new { htmlAttributes = new { @class = "input-field" } })
+            @Html.ValidationMessageFor(model => model.NameUser, "", new { @class = "input-box" })
+
+            <h1> Email:</h1>
+            @Html.EditorFor(model => model.EmailUser, new { htmlAttributes = new { @class = "input-field" } })
+            @Html.ValidationMessageFor(model => model.EmailUser, "", new { @class = "input-box" })
+
+            <h1>Password</h1>
+            @Html.EditorFor(model => model.PasswordUser, new { htmlAttributes = new { @class = "input-field" } })
+            @Html.ValidationMessageFor(model => model.PasswordUser, "", new { @class = "input-box" })
+        </div>
+        <br>
+        <div class="input-submit">
+            <button class="submit-button" id="submit"></button>
+            <label for="submit">Sign Up</label>
+        </div>
+    </div>
+
+}
+
+<div>
+    @Html.ActionLink("Turn back", "Login", "LoginAdmin")
+</div>

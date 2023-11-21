@@ -1,0 +1,48 @@
+﻿@model DEMOO.Models.Category
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<html>
+<head>
+    <link href="~/assets/css/category.css" rel="stylesheet" />
+</head>
+<body>
+    <h2 style="text-align: center; padding: 1rem">Delete</h2>
+
+    <h3 style="padding-left:2rem" >Are you sure you want to delete this?</h3>
+    <div>
+        <h4 style="padding:1rem; padding-left:2rem">Category</h4>
+        <hr />
+        <dl class="form-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.IDCate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IDCate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NameCate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NameCate)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="back">
+                <input type="submit" value="Delete" class="tnh" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBShopModelStoreContainer" CdmEntityContainer="DBShopEntities">
+    <EntitySetMapping Name="AdminUser">
+      <EntityTypeMapping TypeName="DBShopModel.AdminUser">
+        <MappingFragment StoreEntitySet="AdminUser">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameUser" ColumnName="NameUser" />
+          <ScalarProperty Name="EmailUser" ColumnName="EmailUser" />
+          <ScalarProperty Name="RoleUser" ColumnName="RoleUser" />
+          <ScalarProperty Name="PasswordUser" ColumnName="PasswordUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Blog">
+      <EntityTypeMapping TypeName="DBShopModel.Blog">
+        <MappingFragment StoreEntitySet="Blog">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ImageBl" ColumnName="ImageBl" />
+          <ScalarProperty Name="DescriptionBl" ColumnName="DescriptionBl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Category">
+      <EntityTypeMapping TypeName="DBShopModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+          <ScalarProperty Name="NameCate" ColumnName="NameCate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customer">
+      <EntityTypeMapping TypeName="DBShopModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="IDCus" ColumnName="IDCus" />
+          <ScalarProperty Name="NameCus" ColumnName="NameCus" />
+          <ScalarProperty Name="EmailCus" ColumnName="EmailCus" />
+          <ScalarProperty Name="PassCus" ColumnName="PassCus" />
+          <ScalarProperty Name="AddressCus" ColumnName="AddressCus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetail">
+      <EntityTypeMapping TypeName="DBShopModel.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDProduct" ColumnName="IDProduct" />
+          <ScalarProperty Name="IDOrder" ColumnName="IDOrder" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderPro">
+      <EntityTypeMapping TypeName="DBShopModel.OrderPro">
+        <MappingFragment StoreEntitySet="OrderPro">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateOrder" ColumnName="DateOrder" />
+          <ScalarProperty Name="IDCus" ColumnName="IDCus" />
+          <ScalarProperty Name="AddressDelivery" ColumnName="AddressDelivery" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="DBShopModel.Products">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="NamePro" ColumnName="NamePro" />
+          <ScalarProperty Name="ImagePro" ColumnName="ImagePro" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="Amout" ColumnName="Amout" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Madein" ColumnName="Madein" />
+          <ScalarProperty Name="Lens" ColumnName="Lens" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

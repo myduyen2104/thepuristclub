@@ -1,0 +1,50 @@
+﻿@model LTWTH.Models.Customer
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<title>Login</title>
+<link href="~/assets/css/login.css" rel="stylesheet">
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true)
+    <div class="login-box">
+        <div class="login-header">
+            <header>Login</header>
+        </div>
+        <div class="input-box" placeholder="Email">
+            <h1> Email:</h1>
+            @Html.EditorFor(model => model.EmailCus, new { htmlAttributes = new { @class = "input-field" } })
+            @Html.ValidationMessageFor(model => model.EmailCus, "", new { @class = "input-box" })
+
+        <h1> Password:</h1>
+            @Html.EditorFor(model => model.PassCus, new { htmlAttributes = new { @class = "input-field" } })
+            @Html.ValidationMessageFor(model => model.PassCus, "", new { @class = "input-box" })
+        </div>
+        <br>
+        <div class="forgot">
+            <section>
+                <input type="checkbox" name="" id="check">
+                <label for="check">Remember me</label>
+            </section>
+            <section>
+                <a href="~/User/Forgotpass">Forgot Password</a>
+            </section>
+        </div>
+        <div class="input-submit">
+            <button class="submit-button" id="submit"></button>
+            <label for="submit">Sign In</label>
+        </div>
+        <div class="signup">
+            <p>Don't have account? <a href="~/User/Register">Sign Up</a></p>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Turn back", "Index")
+</div>

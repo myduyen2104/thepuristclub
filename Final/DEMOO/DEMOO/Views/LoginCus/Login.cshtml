@@ -1,0 +1,51 @@
+﻿@model DEMOO.Models.Customer
+
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+
+
+<title>Login</title>
+<link href="~/assets/css/login.css" rel="stylesheet">
+
+<h2 style="color: red;">@ViewBag.ThongBao</h2>
+@using (Html.BeginForm("Login", "Users"))
+{
+    @Html.ValidationSummary(true)
+    <div class="login-box">
+        <div class="login-header">
+            <header>Login</header>
+        </div>
+        <div class="input-box" placeholder="Email">
+            <h1> Email:</h1>
+            @Html.EditorFor(model => model.EmailCus, new { htmlAttributes = new { @class = "input-field" } })
+            @Html.ValidationMessageFor(model => model.EmailCus, "", new { @class = "input-box" })
+
+            <h1> Password:</h1>
+            @Html.EditorFor(model => model.PassWordCus, new { htmlAttributes = new { @class = "input-field" } })
+            @Html.ValidationMessageFor(model => model.PassWordCus, "", new { @class = "input-box" })
+        </div>
+        <br>
+        <div class="forgot">
+            <section>
+                <input type="checkbox" name="" id="check">
+                <label for="check">Remember me</label>
+            </section>
+            <section>
+                <a href="~/User/Forgotpass">Forgot Password</a>
+            </section>
+        </div>
+        <div class="input-submit">
+            <button class="submit-button" id="submit"></button>
+            <label for="submit">Sign In</label>
+        </div>
+        <div class="signup">
+            <p>Don't have account? <a href="~/LoginCus/Register">Sign Up</a></p>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Turn back", "Index", "Home")
+</div>
